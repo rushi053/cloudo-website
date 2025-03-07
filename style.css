@@ -45,6 +45,18 @@ body {
     color: var(--primary-color);
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover {
+    opacity: 0.9;
+}
+
 nav {
     background: var(--secondary-color);
     padding: 1rem 0;
@@ -372,6 +384,15 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .nav-links a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -379,9 +400,18 @@ footer {
     .hero p {
         font-size: 1.2rem;
     }
+
+    .feature-grid {
+        gap: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
     
     .support-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .page-header {
@@ -404,6 +434,45 @@ footer {
     .cta-button {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .feature-card i {
+        font-size: 2rem;
+    }
+
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .feature-card p {
+        font-size: 0.9rem;
+    }
+
+    .phone-frame {
+        width: 200px;
+        height: 400px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo i {
+        font-size: 1.5rem;
     }
 }
 
