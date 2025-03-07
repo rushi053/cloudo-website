@@ -26,13 +26,27 @@ body {
     padding: 0 2rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+}
+
 nav {
-    background-color: white;
+    background: #fff;
+    padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
 }
 
 nav .container {
@@ -110,18 +124,169 @@ footer {
 }
 
 /* Support and Privacy Pages */
-.content-page {
-    padding: 120px 0 80px;
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 80px 0 40px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.content-page h1 {
-    margin-bottom: 2rem;
-}
-
-.content-page h2 {
-    margin: 2rem 0 1rem;
-}
-
-.content-page p {
+.page-header h1 {
+    font-size: 2.8rem;
     margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.content-page {
+    padding: 0 0 80px;
+}
+
+/* Support Page Styles */
+.support-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq-section, .contact-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.faq-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--light-bg);
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-2px);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.contact-card {
+    background: var(--light-bg);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.email-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+}
+
+.email-link:hover {
+    color: var(--secondary-color);
+}
+
+.response-time {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Privacy Page Styles */
+.privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.privacy-section {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.highlight-section {
+    background: linear-gradient(135deg, #f0f9ff, #e6f7ff);
+    border: 1px solid #e1f0ff;
+}
+
+.privacy-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+.privacy-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.privacy-list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+}
+
+.privacy-list li:before {
+    content: '✓';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Shared Styles */
+.content-page h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.content-page h2 i {
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header {
+        padding: 60px 0 30px;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .privacy-section, .faq-section, .contact-section {
+        padding: 20px;
+    }
+}
+
+.coming-soon {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.app-store-badge img {
+    height: 40px;
+    width: auto;
 }
